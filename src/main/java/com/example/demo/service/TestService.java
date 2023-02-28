@@ -14,7 +14,7 @@ public class TestService {
     @Resource
     TestRepository testRepository;
     @Transactional
-    public Flux<Test> test(){
+    public Flux<Test> testA(){
         Flux<Test> all = testRepository.findAll();
         return all;
     }

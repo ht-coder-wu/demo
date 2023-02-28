@@ -30,7 +30,7 @@ public class ContextFilter implements WebFilter {
         log.debug("request uri:{}",uri);
         HttpHeaders headers = request.getHeaders();
         String imei = StringUtil.isNullOrEmpty(headers.getFirst("imei"))?"test":headers.getFirst("imei");
-        Duration timeoutDuration = Duration.ofMillis(10000L);
+        Duration timeoutDuration = Duration.ofMillis(100000L);
         long now = System.nanoTime();
         return chain
                 .filter(exchange)

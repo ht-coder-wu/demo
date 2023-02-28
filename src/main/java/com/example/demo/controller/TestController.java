@@ -16,7 +16,7 @@ public class TestController {
     TestService testService;
     @RequestMapping("testA")
     public Flux<Test> testA(){
-        return testService.test();
+        return testService.testA();
     }
     @RequestMapping("testB")
     public Flux<Test> testB(){
